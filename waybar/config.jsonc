@@ -1,0 +1,72 @@
+{
+	//Waybar本体
+	"layer": "top",
+	"position": "top",
+	"modularity": true, 
+	
+	//モジュールの位置
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+  "modules-center": [
+		"clock"
+  ],
+	"modules-right": [
+		"cpu",
+		"memory",
+		"battery",
+		"network",
+		"pulseaudio",
+    "tray"
+  ],
+	// 個々のモジュールの設定
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"default": "○",
+			"active": "●",
+			"urgent": "!"
+    }
+  },
+    
+	"clock": {
+		"interval": 0.5,
+		"format": "🕑 {:%H:%M:%S}",
+    "tooltip-format": "{:%Y年%m月%d日 %A}"
+  },
+    
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "🔇",
+    "format-icons": {
+			"default": "🔊"
+    },
+		"on-click": "pavucontrol"
+  },
+	
+	"network": {
+    //"max-length": 20,
+		"format": "{ifname}",
+		"format-wifi": "{icon} {essid} ↑ {bandwidthUpOctets}↓ {bandwidthDownBits}",
+		"format-ethernet": "{icon} {ifname}",
+		"format-disconnected": "🚫 Offline",
+		"format-icons":{
+			"default": "🛜"
+		},
+		"on-click": "nmtui"
+	},
+	
+	"cpu": {
+		"format": "CPU {usage}%"
+	},
+
+	"memory": {
+		"format": "RAM {percentage}%" 
+	},
+
+	"battery": {
+		"format": "🔋 {capacity}%"
+	}
+}
