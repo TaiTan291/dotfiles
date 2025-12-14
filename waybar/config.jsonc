@@ -2,7 +2,6 @@
 	//Waybar本体
 	"layer": "top",
 	"position": "top",
-	"modularity": true, 
 	
 	//モジュールの位置
 	"modules-left": [
@@ -31,7 +30,6 @@
   },
     
 	"clock": {
-		"interval": 0.5,
 		"format": "🕑 {:%H:%M:%S}",
     "tooltip-format": "{:%Y年%m月%d日 %A}"
   },
@@ -47,26 +45,26 @@
   },
 	
 	"network": {
-    //"max-length": 20,
 		"format": "{ifname}",
-		"format-wifi": "{icon} {essid} ↑ {bandwidthUpOctets}↓ {bandwidthDownBits}",
-		"format-ethernet": "{icon} {ifname}",
+		"format-wifi": "🛜 ↑{bandwidthUpBits} ↓{bandwidthDownBits}",
+		"format-ethernet": "󰈔  ↑{bandwidthUpBits} ↓{bandwidthDownBits}",
 		"format-disconnected": "🚫 Offline",
-		"format-icons":{
-			"default": "🛜"
-		},
-		"on-click": "nmtui"
+		"tooltip-format-wifi": "接続  : {ifname} \nSSID  : {essid} \nIP  : {ipaddr} \n通信強度  : {signalStrength} \n通信速度  : ↑{bandwidthUpBits} ↓{bandwidthDownBits}", 
+		"on-click": "kitty -e nmtui"
 	},
 	
 	"cpu": {
+		"interval": 1,
 		"format": "CPU {usage}%"
 	},
 
 	"memory": {
+		"interval": 1,
 		"format": "RAM {percentage}%" 
 	},
 
 	"battery": {
+		"interval": 60,
 		"format": "🔋 {capacity}%"
 	}
 }
