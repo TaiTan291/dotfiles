@@ -9,27 +9,20 @@ return{
 		},
 		config = function()
 			vim.keymap.set({"i","n","c"},"<C-j>","<Plug>(skkeleton-enable)")
+			--vim.keymap.set({"i","n","c"},"<ESC>",function()
+			--	vim.fn["skkeleton#handle"]("disable", "")
+			--	return "<ESC>"
+			--end, { expr = true, silent = true })
+
 			vim.fn["skkeleton#config"]({
 				globalDictionaries = {
-					"/usr/share/skk/SKK-JISYO.L",
-					"/usr/share/skk/SKK-JISYO.jinmei",
-					"/usr/share/skk/SKK-JISYO.fullname",
-					"/usr/share/skk/SKK-JISYO.geo",
-					"/usr/share/skk/SKK-JISYO.propernoun",
-					"/usr/share/skk/SKK-JISYO.station",
-					"/usr/share/skk/SKK-JISYO.law",
-					"/usr/share/skk/SKK-JISYO.okinawa",
-					"/usr/share/skk/SKK-JISYO.china_taiwan",
-					"/usr/share/skk/SKK-JISYO.assoc",
-					"/usr/share/skk/SKK-JISYO.JIS2",
-					"/usr/share/skk/SKK-JISYO.JIS3_4",
-					"/usr/share/skk/SKK-JISYO.JIS2004",
-					"/usr/share/skk/SKK-JISYO.itaiji",
-					"/usr/share/skk/SKK-JISYO.itaiji.JIS3_4",
-					"/usr/share/skk/SKK-JISYO.mazegaki",
-					"/usr/share/skk/SKK-JISYO.lisp",
+					"~/skk_dict/global-dict/SKK-JISYO.L.unannotated",
+					"~/skk_dict/global-dict/SKK-JISYO.fullname",
+					"~/skk_dict/global-dict/SKK-JISYO.jinmei",
+					"~/skk_dict/global-dict/SKK-JISYO.propernoun",
+					"~/skk_dict/global-dict/SKK-JISYO.station",
 				},
-				userDictionary = vim.fn.expand("~/.local/share/fcitx5/skk/user.dict"),
+				userDictionary = vim.fn.expand("~/skk-dict/user.dict"),
 			})
 		end,
 	},
