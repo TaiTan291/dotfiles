@@ -17,12 +17,12 @@
     { device = "/dev/disk/by-label/NIXROOT";
     };
 
-	fileSystem."/boot" =
+	fileSystems."/boot" =
 		{ device = "/dev/disk/by-label/BOOT";
 		};
 
   swapDevices = [
-		{label = swap;}
+		{label = “swap”;}
 ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
