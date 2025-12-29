@@ -14,11 +14,16 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/889945f3-0749-4207-9aae-a827bd21c950";
-      fsType = "ext4";
+    { device = "/dev/disk/by-label/NIXROOT";
     };
 
-  swapDevices = [ ];
+	fileSystem."/boot" =
+		{ device = "/dev/disk/by-label/BOOT";
+		};
+
+  swapDevices = [
+		{label = swap;}
+];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
