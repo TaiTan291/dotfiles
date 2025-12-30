@@ -22,7 +22,7 @@
 		};
 
   swapDevices = [
-		{label = “swap”;}
+		{label = "swap";}
 ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

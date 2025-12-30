@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ config, inputs, lib, pkgs, ... }:
 
 {
 	imports =[
@@ -17,10 +17,13 @@
 		LC_MESSAGES = "ja_JP.UTF-8";
 		LC_TIME= "ja_JP.UTF-8";
 	};
-	services.xserver.xkb ={
-		layout = "jp";
-		variant = "106";
-  		options = "ctrl:nocaps";
+	services.xserver = {
+		enable = true;
+		xkb ={
+			layout = "jp";
+			variant = "106";
+  			options = "ctrl:nocaps";
+		};
 	};
 	console = {
 		font = "Lat2-Terminus16";
@@ -38,7 +41,6 @@
 		shell = pkgs.bash;
 		home = "/home/taitan";
 	};
-	#home-manager.users.taitan = import ./home.nix;
 
 	# GRUB
 	boot.loader = {
@@ -56,10 +58,17 @@
 	};
 
 	# Hyprland
-	programs.hyprland.enable = true; # hyprland
+	programs.hyprland = {
+		enable = true;
+		package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+		portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+	};
 	
 	# NetworkManager
 	networking.networkmanager.enable = true;
+
+	#firedox
+	programs.firefox.enable = true;
 
 	nixpkgs.config.allowUnfree = true;
 
@@ -79,20 +88,18 @@
 		kdePackages.dolphin
 
 		##font
+		noto-fonts
 		noto-fonts-cjk-sans
 
 		#browser
-		firefox
 		brave
 
 		#develpment
 		git
 
 		##editor
-		vim
 		neovim
 		emacs
-		vscode
 		
 		## dependence
 		deno # denops.vim
@@ -120,7 +127,6 @@
 
 
   # Enable the X11 windowing system.
-  # services.xserver.enable = true;
 
 
   

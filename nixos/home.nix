@@ -5,7 +5,10 @@
 	home = {
 		username = "taitan";
 		homeDirectory = "/home/taitan";
-		stateVersion = "24.11";
+		#stateVersion = "24.11";
+		#file = {
+		#
+		#};
 	};
 
 	programs.home-manager.enable = true; # home-manager
