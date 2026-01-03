@@ -28,6 +28,7 @@
 		./hyprland.nix
 		./waybar.nix
 		./git.nix
+		./fcitx5.nix
 	];
 	programs.home-manager.enable = true; # home-manager
 }

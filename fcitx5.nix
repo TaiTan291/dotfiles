@@ -1,3 +1,4 @@
+{ config, pkgs, ... }:
 {
 	xdg.configFile = {
 		"fcitx5/profile".text = ''
