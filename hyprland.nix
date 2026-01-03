@@ -21,7 +21,8 @@
 				"nm-applet"
 				"dunst"
 				"waybar"
-				"fcitx5 -d --replace"
+				"fcitx5 -d -r"
+				"fcitx5-remote -r"
 			];
 			# See https://wiki.hypr.land/Configuring/Environment-v
 			env = [
@@ -29,9 +30,9 @@
 				"HYPRCURSOR_SIZE,24"
 				#fcitx5
 				"QT_IM_MODULE,fcitx"
-				"XMODIFIERS,@im=fcitx"
-				"INPUT_METHOD,fcitx"
 				"GTK_IM_MODULE,fcitx"
+				"XMODIFIERS,@im=fcitx"
+				#"INPUT_METHOD,fcitx"
 			];
 
 			# 一般設定
@@ -206,6 +207,7 @@
 
 			# ウィンドウルール
 			windowrule = [
+				#pseudo, fcitx
 				#"suppressevent maximize, class:.*"
 				#"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 			];
