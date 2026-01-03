@@ -122,8 +122,8 @@
 
 			#ジェスチャー
 			gestures = {
-				workspace_swipe = true;
-				workspace_swipe_fingers = 3;
+				#workspace_swipe = true;
+				#workspace_swipe_fingers = 3;
 			};
 
 			#キーバインド
@@ -206,8 +206,8 @@
 
 			# ウィンドウルール
 			windowrule = [
-				"suppressevent maximize, class:.*"
-				"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+				#"suppressevent maximize, class:.*"
+				#"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 			];
 		};
 	};
