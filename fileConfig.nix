@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
 {
+	home.sessionVariables = {
+				QT_IM_MODULE = "fcitx";
+				XMODIFIERS = "@im=fcitx";
+	};
+
 	xdg.configFile = {
 		"fcitx5/profile".text = ''
 			[Groups/0]

@@ -15,6 +15,7 @@
 			"$menu" = "wofi --show drun";
 			"$browser" = "firefox";
 			"$mainMod" = "SUPER";
+			"$hyprshot" = "/home/taitan/Screenshots";#save in drectry
 
 			exec-once = [
 				"$terminal"
@@ -30,9 +31,7 @@
 				"HYPRCURSOR_SIZE,24"
 				#fcitx5
 				"QT_IM_MODULE,fcitx"
-				"GTK_IM_MODULE,fcitx"
 				"XMODIFIERS,@im=fcitx"
-				#"INPUT_METHOD,fcitx"
 			];
 
 			# 一般設定
@@ -178,9 +177,10 @@
 				"$mainMod, mouse_up, workspace, e-1"
         
 				# スクリーンショット
-				", Print, exec, hyprshot -m window"
-				"$mainMod, Print, exec, hyprshot -m region"
-				"$mainMod SHIFT, Print, exec, hyprshot -m output"
+				", Print, exec, hyprshot -m window --clipboard-only"
+				"SHIFT, Print , exec, hyprshot -m window -o $hyprshot"
+				"$mainMod, Print, exec, hyprshot -m region --clipboard-only"
+				"$mainMod SHIFT, Print, exec, hyprshot -m region -o $hyprshot"
 			];
 			# マウスバインド
 			bindm = [

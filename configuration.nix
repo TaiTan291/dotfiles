@@ -22,10 +22,13 @@
 		inputMethod = {
 			enable = true;
 			type = "fcitx5";
-			fcitx5.addons = with pkgs; [
-				fcitx5-skk
-				kdePackages.fcitx5-configtool
-			];
+			fcitx5= {
+				waylandFrontend = true;
+				addons = with pkgs; [
+					fcitx5-skk
+					kdePackages.fcitx5-configtool
+				];
+			};
 		};
 	};
 	services.xserver = {
