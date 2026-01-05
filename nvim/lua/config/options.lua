@@ -10,6 +10,9 @@ vim.opt.tabstop = 2 --tab文字の表示幅
 vim.opt.softtabstop = 2 --tabの空白の数
 vim.opt.shiftwidth = 2 --自動インシデントの空白数
 
+
+--vim.opt.wildignore:append("*.pdf") --Tab補完の除外
+
 --- ---------------
 --- ファイルを読み込む
 --- ---------------

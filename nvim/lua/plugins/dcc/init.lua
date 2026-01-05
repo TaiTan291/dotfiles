@@ -1,5 +1,0 @@
-return{
-	{
-		"Shougo/dcc.vim",
-	}
-}
