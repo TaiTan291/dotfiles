@@ -30,7 +30,7 @@
   },
     
 	"clock": {
-		"format": "🕑 {:%H:%M:%S}",
+		"format": "🕑 {:%H:%M}",
     "tooltip-format": "{:%Y年%m月%d日 %A}"
   },
     
