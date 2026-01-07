@@ -7,7 +7,8 @@
 		".skk-doct/user.dict".text = "";
 		".skk-doct/golobal.keep".text = "";
 		".bashrc".text = ''
-			alias nvim='nvim --cmd "set wildignore+=*.pdf"'
+			complete -f -X '*.pdf' nvim emacs vim
+			complete -f -X '*.typ' xdg-open
 		'';
 	};
 }

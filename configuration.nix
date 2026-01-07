@@ -133,6 +133,10 @@
 		
 		## dependence
 		deno # denops.vim
+		typst
+		vimPlugins.typst-preview-nvim
+		tinymist
+		websocat # WebSocat
 
 		##rust
 		rustc # compiler
@@ -160,11 +164,20 @@
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+	security.rfkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
+services.pipewire.wireplumber.extraConfig.bluetoothEnhancements = {
+  "monitor.bluez.properties" = {
+      "bluez5.enable-sbc-xq" = true;
+      "bluez5.enable-msbc" = true;
+      "bluez5.enable-hw-volume" = true;
+      "bluez5.roles" = [ "hsp_hs" "hsp_ag" "hfp_hf" "hfp_ag" ];
+  };
+};
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
