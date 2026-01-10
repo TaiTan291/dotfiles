@@ -10,16 +10,16 @@
 		"Screenshots/.keep".text = "";
 		"school/.keep".text = "";
 		".skk-dict/user.dict".text = "";
-		#".skk-dict/golobal.SKK-JISYO.L".source = ./skk/SKK-JISYO.L;
-		#".skk-dict/golobal.SKK-JISYO.jinmei".source = ./skk/SKK-JISYO.jinmei;
-		#".skk-dict/golobal.SKK-JISYO.station".source = ./skk/SKK-JISYO.station;
+		".skk-dict/global/SKK-JISYO.L".source = ./skk/SKK-JISYO.L;
+		".skk-dict/global/SKK-JISYO.jinmei".source = ./skk/SKK-JISYO.jinmei;
+		".skk-dict/global/SKK-JISYO.station".source = ./skk/SKK-JISYO.station;
 		".bashrc".text = ''
 			complete -f -X '*.pdf' nvim emacs vim
 			complete -f -X '*.typ' xdg-open
 		'';
 	};
 
-	xdg.homeFile = {
+	xdg.configFile = {
 		"fcitx5/profile".text = ''
 			[Groups/0]
 			# Group Name

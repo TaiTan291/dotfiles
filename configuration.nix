@@ -85,7 +85,7 @@
 			device = "nodev";
 			useOSProber = true;
 			timeout = 60;
-			theme = "/boot/grub/themes/bsol/bsol/theme.txt";
+			#theme = "/boot/grub/themes/bsol/bsol/theme.txt";
 		};
 	};
 
@@ -110,7 +110,9 @@
 	environment.systemPackages = with pkgs; [
 		#develpment
 		git
-		wget
+		zip
+		unzip
+		gzip
 
 		#editor
 		vim

@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+
 	programs.kitty.enable = true; # kitty
 	wayland.windowManager.hyprland = {
 		enable = true;

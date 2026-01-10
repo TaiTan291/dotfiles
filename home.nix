@@ -7,13 +7,6 @@
 		username = "taitan";
 		homeDirectory = "/home/taitan";
 		packages = with pkgs; [
-			#home-manager
-			bat
-			bottom
-			httpie
-			pingu
-			ripgrep
-			
 			#editor
 			neovim
 			emacs
@@ -49,7 +42,7 @@
 			kdePackages.kio-extras
 			kdePackages.dolphin
 			
-			#ブラウザ
+			#browser
 			brave
 			
 			#SNS
@@ -76,8 +69,7 @@
 		./hyprland.nix
 		./waybar.nix
 		./git.nix
-		./fileConfig.nix
-		./fileHome.nix
+		./homeFile.nix
 	];
 	programs.home-manager.enable = true; # home-manager
 }
