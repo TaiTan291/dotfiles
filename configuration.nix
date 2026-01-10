@@ -110,6 +110,7 @@
 	environment.systemPackages = with pkgs; [
 		#develpment
 		git
+		wget
 		zip
 		unzip
 		gzip
