@@ -84,6 +84,8 @@
 			efiSupport = true;
 			device = "nodev";
 			useOSProber = true;
+			timeout = 60;
+			theme = "/boot/grub/themes/bsol/bsol/theme.txt";
 		};
 	};
 
@@ -100,50 +102,19 @@
 	#browser
 	programs = {
 		firefox.enable = true;
-		#google-chrome.enable = true;
 	};
 
-	nixpkgs.config.allowUnfree = true;
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+	nixpkgs.config.allowUnfree = true;
 
 	environment.systemPackages = with pkgs; [
-		# GUI( Hyprland )
-		kitty
-		waybar
-		hyprshot
-		wofi
-		dunst
-		playerctl
-		brightnessctl
-		##dolphin( File Manager )
-		kdePackages.qtsvg
-		kdePackages.kio
-		kdePackages.kio-fuse
-		kdePackages.kio-extras
-		kdePackages.dolphin
-
 		#develpment
 		git
 		wget
 
-		##editor
-		neovim
-		emacs
-		vscode
-		
-		## dependence
-		deno # denops.vim
-		typst
-		vimPlugins.typst-preview-nvim
-		tinymist
-		websocat # WebSocat
+		#editor
+		vim
 
-		##rust
-		rustc # compiler
-		cargo # package manager
-		rustfmt # code format
-		clippy # code linter
-		
 		#other
 		os-prober
 	];
@@ -164,7 +135,6 @@
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
-	security.rfkit.enable = true;
   services.pipewire = {
     enable = true;
     pulse.enable = true;

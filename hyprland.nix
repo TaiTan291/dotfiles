@@ -13,7 +13,7 @@
 			"$terminal" = "kitty";
 			"$fileManager" = "dolphin";
 			"$menu" = "wofi --show drun";
-			"$browser" = "firefox";
+			"$browser" = "brave";
 			"$mainMod" = "SUPER";
 			"$hyprshot" = "/home/taitan/Screenshots";#save in drectry
 
@@ -206,10 +206,9 @@
 			];
 
 			# ウィンドウルール
-			windowrule = [
-				#pseudo, fcitx
-				#"suppressevent maximize, class:.*"
-				#"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+			windowrulev2 = [
+				"suppressevent maximize, class:.*"
+				"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 			];
 		};
 	};
