@@ -1,0 +1,4 @@
+[read_only]
+read_only_symbol = "🔒"
+style = "bold red"
+disabled = false
