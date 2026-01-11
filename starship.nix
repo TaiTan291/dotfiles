@@ -4,11 +4,10 @@
     enable = true;
     settings = {
       add_newline = false;
-      format = "\\[$username[@](bold green)$hostname[ ](bold green)$directory\\]$git_branch$direnv $cmd_duration
-[\\$ ](bold green)";
+      format = "$username[@](bold green)$hostname[:](bold green)$directory$git_branch$direnv[\\$ ](bold green)";
       
       username = {
-        format = "[$user](bold green)";
+        format = "\\[[$user](bold green)";
         show_always = true;
       };
       
@@ -18,24 +17,19 @@
       };
       
       directory = {
-        format = "[$path](bold green)[$read_only](bold red)";
+        format = "[$path](bold green)[$read_only](bold red)\\]";
         truncation_length = 3;
         truncate_to_repo = false;
       };
       
       git_branch = {
-        format = " [\\(($branch)\\)](bold green)";
+        format = "[\\(($branch)\\)](bold #65BBE9)";
         only_attached = false;
       };
       
       direnv = {
         disabled = false;
         format = "[$symbol$allowed](bold green)";
-      };
-      
-      cmd_duration = {
-        min_time = 1000;
-        format = "[$duration](bold green)";
       };
     };
   };
