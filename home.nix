@@ -70,6 +70,7 @@
 		./hyprland.nix
 		./waybar.nix
 		./git.nix
+		./starship.nix
 		./homeFile.nix
 	];
 	programs.home-manager.enable = true; # home-manager

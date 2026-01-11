@@ -14,8 +14,12 @@
 		".skk-dict/global/SKK-JISYO.jinmei".source = ./skk/SKK-JISYO.jinmei;
 		".skk-dict/global/SKK-JISYO.station".source = ./skk/SKK-JISYO.station;
 		".bashrc".text = ''
+			#tab補完
 			complete -f -X '*.pdf' nvim emacs vim
 			complete -f -X '*.typ' xdg-open
+			
+			#starship
+			eval "$(starship init bash)"
 		'';
 	};
 
