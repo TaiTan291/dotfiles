@@ -20,10 +20,10 @@
 			websocat # WebSocat
 
 			#rust
-			rustc # compiler
-			cargo # package manager
-			rustfmt # code format
-			clippy # code linter
+			#rustc # compiler
+			#cargo # package manager
+			#rustfmt # code format
+			#clippy # code linter
 
 			#GUI(hyprland)
 			kitty
@@ -32,6 +32,7 @@
 			pavucontrol
 			dunst
 			playerctl
+			starship
 			##画面光度
 			xorg.xbacklight
 			brightnessctl
