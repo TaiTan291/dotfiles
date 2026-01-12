@@ -21,13 +21,13 @@
 			#tinymist
 		];
 			#require("skkeleton")
+			#"nvim/lua/skkeleton.lua".source = ./lua/skkeleton.lua;
 
 		extraLuaConfig = ''
 			require("option")
 		'';
 
 		xdg.configFile = {
-			--"nvim/lua/skkeleton.lua".source = ./lua/skkeleton.lua;
 			"nvim/lua/options.lua".source = ./lua/options.lua;
 		};
 	};
