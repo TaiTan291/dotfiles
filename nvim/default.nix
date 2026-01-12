@@ -7,16 +7,16 @@
 		defaultEditor = true;
 		plugins = with pkgs.vimPlugins; [
 			#deno
-			#denops-vim
+			denops-vim
 			#skk
-			#skkeleton
+			skkeleton
 			#LSP
 			#nvim-lspconfig
 			#mason-nvim
 			#mason-lspconfig-nvim
 		];
 		extraPackages = with pkgs; [
-			#deno
+			deno
 			#typst
 			#tinymist
 		];
