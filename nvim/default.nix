@@ -8,8 +8,6 @@
 		plugins = with pkgs.vimPlugins; [
 			#deno
 			denops-vim
-			#skk
-			skkeleton
 			#LSP
 			#nvim-lspconfig
 			#mason-nvim
@@ -20,8 +18,6 @@
 			#typst
 			#tinymist
 		];
-			#require("skkeleton")
-			#"nvim/lua/skkeleton.lua".source = ./lua/skkeleton.lua;
 
 		extraLuaConfig = ''
 			require("options")
