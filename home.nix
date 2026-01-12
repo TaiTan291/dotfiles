@@ -12,13 +12,6 @@
 			emacs
 			vscode
 			
-			## dependence
-			deno # denops.vim
-			typst
-			vimPlugins.typst-preview-nvim
-			tinymist
-			websocat # WebSocat
-
 			#rust
 			#rustc # compiler
 			#cargo # package manager
