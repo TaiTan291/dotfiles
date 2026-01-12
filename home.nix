@@ -8,7 +8,6 @@
 		homeDirectory = "/home/taitan";
 		packages = with pkgs; [
 			#editor
-			neovim
 			emacs
 			vscode
 			
