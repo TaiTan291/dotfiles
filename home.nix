@@ -43,6 +43,28 @@
 			discord-ptb
 			slack
  		];
+		sessionVariables = {
+			QT_IM_MODULE = "fcitx";
+			XMODIFIERS = "@im=fcitx";
+		};
+	
+		file = {
+			"Downloads/.keep".text = "";
+			"Screenshots/.keep".text = "";
+			"school/.keep".text = "";
+			".skk-dict/user.dict".text = "";
+			".skk-dict/SKK-JISYO.L".source = ./skk/SKK-JISYO.L;
+			".skk-dict/SKK-JISYO.jinmei".source = ./skk/SKK-JISYO.jinmei;
+			".skk-dict/SKK-JISYO.station".source = ./skk/SKK-JISYO.station;
+			".bashrc".text = ''
+				#tab補完
+				complete -f -X '*.pdf' nvim emacs vim
+				complete -f -X '*.typ' xdg-open
+			
+				#starship
+				eval "$(starship init bash)"
+			'';
+		};
 	};
 	
 	xdg.mimeApps = {
@@ -64,7 +86,8 @@
 		./git.nix
 		./starship.nix
 		./nvim
-		./homeFile.nix
+		./fcitx5
+		#./homeFile.nix
 	];
 	programs.home-manager.enable = true; # home-manager
 }
