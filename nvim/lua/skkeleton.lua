@@ -1,8 +1,13 @@
 local function setup_skk()
-	keys = {
-		{ "<C-j>", mode = {"i","n","c"} },
-	},
 	vim.keymap.set({"i","n","c"},"<C-j>","<Plug>(skkeleton-enable)")
+	vim.keymap.set("i","<Esc>",function()
+		vim.fn["skkeleton#disable"]()
+		return "<Esc>"
+	end,
+	)
+	
+
+	-- "<Plug>(skkeleton-disable)
 	vim.fn["skkeleton#config"]({
 		globalDictionaries = {
 			"~/.skk_dict/SKK-JISYO.L",
