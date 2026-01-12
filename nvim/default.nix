@@ -20,9 +20,9 @@
 			#typst
 			#tinymist
 		];
+			#require("skkeleton")
 
 		extraLuaConfig = ''
-			--require("skkeleton")
 			require("option")
 		'';
 

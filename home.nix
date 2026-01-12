@@ -64,6 +64,7 @@
 		./waybar.nix
 		./git.nix
 		./starship.nix
+		./nvim
 		./homeFile.nix
 	];
 	programs.home-manager.enable = true; # home-manager
