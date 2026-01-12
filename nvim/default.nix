@@ -21,10 +21,12 @@
 
 		extraLuaConfig = ''
 			require("options")
+			require("skkeleton")
 		'';
 	};
 
 	xdg.configFile = {
 		"nvim/lua/options.lua".source = ./lua/options.lua;
+		"nvim/lua/skkeleton.lua".source = ./lua/skkeleton.lua;
 	};
 }
