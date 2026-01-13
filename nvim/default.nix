@@ -1,11 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 let
-	skkeleton = pkgs.vimUtils.buildVimPlugin {
-		name = "skkeleton";
-		src = builtins.fetchGit {
-			url = "https://github.com/vim-skk/skkeleton";
+	skkeleton-vim = pkgs.vimUtils.buildVimPlugin {
+    name = "skkeleton";
+		src = pkgs.fetchFromGitHub {
+      owner = "vim-skk";
+      repo = "skkeleton";
 		};
-	};
+  };
 
 in
 {
@@ -18,7 +19,7 @@ in
 			#deno
 			denops-vim
 			#skk
-			skkeleton
+			#skkeleton
 			#LSP
 			#nvim-lspconfig
 			#mason-nvim
