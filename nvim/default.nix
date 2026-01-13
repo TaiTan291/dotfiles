@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
 	skkeleton = pkgs.vimUtils.buildVimPlugin {
-		name = skkeleton
+		name = "skkeleton";
 		src = builtins.fetchGit {
 			url = "https://github.com/vim-skk/skkeleton";
 		};
