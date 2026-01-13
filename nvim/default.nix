@@ -1,4 +1,13 @@
 { pkgs, ... }:
+let
+	skkeleton = pkgs.vimUtils.buildVimPlugin {
+		name = skkeleton
+		src = builtins.fetchGit {
+			url = "https://github.com/vim-skk/skkeleton";
+		};
+	};
+
+in
 {
 	programs.neovim = {
 		enable = true;
@@ -8,6 +17,8 @@
 		plugins = with pkgs.vimPlugins; [
 			#deno
 			denops-vim
+			#skk
+			skkeleton
 			#LSP
 			#nvim-lspconfig
 			#mason-nvim
@@ -18,7 +29,6 @@
 			#typst
 			#tinymist
 		];
-
 		extraLuaConfig = ''
 			require("options")
 			require("skkeleton")
