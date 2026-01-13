@@ -1,0 +1,1 @@
+/nix/store/jh03pncm2z89w6nmk3pklpj55cjnfj1v-home-manager-files/.config/fcitx5/profile
