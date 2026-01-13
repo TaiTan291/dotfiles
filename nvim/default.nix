@@ -5,8 +5,8 @@ let
 		src = pkgs.fetchFromGitHub {
       owner = "vim-skk";
       repo = "skkeleton";
-			ver = 2.0.0;
-			sha256 = "954f2f96e74a0c409f12315278fb1bbef0286b60954f2f96e74a0c409f12315278fb1bbef0286b60";
+			rev = "2.0.0";
+			sha256 = "sha256-PRYm015GqZ0JPIbsFG29Q89M4BDE9sG9Le/UakiaWEE="; 
 		};
   };
 
