@@ -6,6 +6,7 @@ let
       owner = "vim-skk";
       repo = "skkeleton";
 			ver = 2.0.0;
+			sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
 		};
   };
 
