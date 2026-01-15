@@ -23,23 +23,23 @@ in
 			#skk
 			skkeleton
 			#LSP
-			#nvim-lspconfig
-			#mason-nvim
-			#mason-lspconfig-nvim
+			nvim-lspconfig
 		];
 		extraPackages = with pkgs; [
 			deno
-			#typst
-			#tinymist
+			typst
+			tinymist
 		];
 		extraLuaConfig = ''
 			require("options")
 			require("skkeleton")
+			require("lsp")
 		'';
 	};
 
 	xdg.configFile = {
 		"nvim/lua/options.lua".source = ./lua/options.lua;
 		"nvim/lua/skkeleton.lua".source = ./lua/skkeleton.lua;
+		"nvim/lua/lsp.lua".source = ./lua/lsp.lua;
 	};
 }
