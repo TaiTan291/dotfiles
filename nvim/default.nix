@@ -18,12 +18,15 @@ in
 		vimAlias = true;
 		defaultEditor = true;
 		plugins = with pkgs.vimPlugins; [
-			#deno
-			denops-vim
 			#skk
 			skkeleton
+			#deno
+			denops-vim
+			#cmp
 			#LSP
 			nvim-lspconfig
+			#typst
+			typst-preview-nvim
 		];
 		extraPackages = with pkgs; [
 			deno
@@ -34,6 +37,7 @@ in
 			require("options")
 			require("skkeleton")
 			require("lsp")
+			require("typst")
 		'';
 	};
 
@@ -41,5 +45,6 @@ in
 		"nvim/lua/options.lua".source = ./lua/options.lua;
 		"nvim/lua/skkeleton.lua".source = ./lua/skkeleton.lua;
 		"nvim/lua/lsp.lua".source = ./lua/lsp.lua;
+		"nvim/lua/typst.lua".source = ./lua/typst.lua;
 	};
 }
