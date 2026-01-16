@@ -1,13 +1,23 @@
-{ pkgs, ... }:
+{ pkgs, hyprland-plugins, ... }:
 {
-
 	programs.kitty.enable = true; # kitty
 	wayland.windowManager.hyprland = {
 		enable = true;
-		systemd = {
-			enable = true;
-		};
+		plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprcursor
+    ];
+		systemd.enable = true;
 		settings = {
+			"plugin:hyprcursor" = {
+        # Shake to findの設定
+        "shake" = {
+          "enabled" = true;
+          "threshold" = 5.0;      # 感度
+          "base" = 4.0;           # 拡大倍率のベース
+          "speed" = 4.0;          # 拡大スピード
+          "influence" = 0.0;      # 拡大時の中心位置への影響度
+				};
+			};
 			# See http://wiki.hypr.land/Configuring/Keywrods/
 			monitor = ",preferred,auto,auto";
 

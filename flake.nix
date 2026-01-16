@@ -1,10 +1,14 @@
 {
 	inputs = {
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-		hyprland.url = "github:hyprwm/Hyprland";
 		home-manager = {
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
+		};
+		hyprland.url = "github:hyprwm/Hyprland";
+		hyprland-plugins = {
+			url = "github:hyprwm/hyprland-plugins";
+			inputs.hyprland.follows = "hyprland";
 		};
 	};
 
