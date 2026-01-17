@@ -4,7 +4,8 @@
     enable = true;
     settings = {
       add_newline = false;
-      format = "$directory$username$git_branch$all$character";
+      format = ''$directory$username$git_branch
+$character'';
       
       
       directory = {
@@ -31,8 +32,8 @@
 			*/
 
 			character = {
-				success_symbol = "[>](bold green)";
-				error_symbol = "[>](bold red)";
+				success_symbol = "[❯](bold green)";
+				error_symbol = "[❯](bold red)";
 			};
     };
   };
