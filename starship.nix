@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       add_newline = false;
-      format = ''$directory$username$git_branch
+      format = ''$directory $username $git_branch
 $character'';
       
       

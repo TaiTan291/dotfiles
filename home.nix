@@ -85,6 +85,7 @@
 		./hyprland.nix
 		./waybar.nix
 		./starship.nix
+		./cursor.nix
 		./git.nix
 		./fcitx5.nix
 	];
