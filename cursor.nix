@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
 	home.pointerCursor = {
-    package = pkgs.breeze_cursors;
-    name = "Ked-Plasma-cursors";
+    package = pkgs.kdePackages.breeze-gtk;
+    name = "breeze_cursors";
     size = 24;
     
     gtk.enable = true;
@@ -12,8 +12,8 @@
   gtk = {
     enable = true;
     cursorTheme = {
-      package = pkgs.breeze_cursors;
-      name = "Ked-Plasma-cursors";
+      package = pkgs.kdePackages.breeze-gtk;
+      name = "breeze_cursors";
     };
   };
 }
