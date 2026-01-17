@@ -40,6 +40,24 @@
 		};
 	};
 
+	#passwd miss
+	security.pam.services.sudo.failDelay = 10000;#1,000,000:1s
+	security.pam.services.sudo.text = ''
+    # 認証失敗をカウント・制御する設定
+    # deny=10 : 10回連続失敗でロック
+    # unlock_time=60 : 60秒（1分）間ロック
+    auth required pam_faillock.so preauth
+    auth [success=1 default=ignore] pam_unix.so nullok
+    auth requisit pam_faillock.so authfail deny=10 unlock_time=60
+    auth required pam_faillock.so authsucc
+
+    account required pam_faillock.so
+    account include system-auth
+    
+    password include system-auth
+    session include system-auth
+  '';
+
 	#font	
 	fonts = {
 		packages = with pkgs; [
