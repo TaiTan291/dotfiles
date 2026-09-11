@@ -162,11 +162,11 @@
         "nixpkgs-lib": "nixpkgs-lib_2"
       },
       "locked": {
-        "lastModified": 1785627969,
-        "narHash": "sha256-4dtXQk/NMePegK/nWp5NSeuZKLATItOq61lpEvmXqGw=",
+        "lastModified": 1788450739,
+        "narHash": "sha256-glZLQlzIn1fXH6PazR2iUmTo7kzzyYSshrWhLS9TqCU=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "427bf4bd9435fdf21321c8cc628c24efc14c0f7a",
+        "rev": "31729ca8cbdb4fa927b34e5f4353e6a83f39e993",
         "type": "github"
       },
       "original": {
@@ -205,11 +205,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784288435,
-        "narHash": "sha256-ReRHaLgr/uVqdD8afFSn+myXIfpHeOhP0yYe0TJqAA8=",
+        "lastModified": 1788267358,
+        "narHash": "sha256-nt+lUqYVpc9Y6JeMd2WmXzCDojasdadKo0mWcluvY2Y=",
         "owner": "cachix",
         "repo": "git-hooks.nix",
-        "rev": "43b3c1ab9d40fb1dbb008f451988a91e375825e9",
+        "rev": "27555e2624241fb116b49095df4caaee85a25691",
         "type": "github"
       },
       "original": {
@@ -633,11 +633,11 @@
     },
     "nixpkgs-lib_2": {
       "locked": {
-        "lastModified": 1785031560,
-        "narHash": "sha256-OmshNvn2vupOFpYinLUu+1Dnpu4n7Q5N3ggGVNHpkUI=",
+        "lastModified": 1788057806,
+        "narHash": "sha256-DTQSMxzDWmT0zhguthvegnVkn7CFqGCv4IHCzk5ZUpM=",
         "owner": "nix-community",
         "repo": "nixpkgs.lib",
-        "rev": "0e79af5e3d4dcfcd676ab5ba3f95d2e3352e078c",
+        "rev": "596e2e3940e09b2abbeb03f75fa1828c57fcd72c",
         "type": "github"
       },
       "original": {
@@ -722,11 +722,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1789103129,
-        "narHash": "sha256-ArrUQ9wlknE5ZXekNN5qDKSPvhnZrVal1xqA7GsU4XM=",
+        "lastModified": 1789111781,
+        "narHash": "sha256-fD+9KR1x1xu8SRv81/k33PiGCH8RhbPK2n/tAc9kSc8=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "e17555150f843e4374e96be42364f332959f9c6c",
+        "rev": "ed5a5535e4390fb3752a3d75ff73b62407afc7f2",
         "type": "github"
       },
       "original": {
@@ -757,29 +757,6 @@
         "type": "github"
       }
     },
-    "uindows-themes": {
-      "inputs": {
-        "flake-parts": "flake-parts_4",
-        "git-hooks-nix": "git-hooks-nix_2",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "treefmt-nix": "treefmt-nix"
-      },
-      "locked": {
-        "lastModified": 1789046490,
-        "narHash": "sha256-/RgQsg3DAFVypIJtW3LNHcPFoi65v+AG/5Td5Xulbzw=",
-        "ref": "refs/heads/main",
-        "rev": "15a652ae55fb1f8d923e4b2d0e90de0e972a5080",
-        "revCount": 51,
-        "type": "git",
-        "url": "https://github.com/TaiTan291/UindowsOS-themes.git"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://github.com/TaiTan291/UindowsOS-themes.git"
-      }
-    },
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -791,8 +768,8 @@
         "nixpkgs": "nixpkgs_3",
         "nixvim": "nixvim",
         "nur": "nur",
-        "uindows-themes": "uindows-themes",
-        "treefmt-nix": "treefmt-nix_2"
+        "treefmt-nix": "treefmt-nix",
+        "uindows-themes": "uindows-themes"
       }
     },
     "systems": {
@@ -830,27 +807,6 @@
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
-          "uindows-themes",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1785360170,
-        "narHash": "sha256-XE1lKgQ3eIO3E7zWryqcRsax+mYXod/5RHBn4YaR9YE=",
-        "owner": "numtide",
-        "repo": "treefmt-nix",
-        "rev": "d1187f8bc71fb8aab02395869ec3f5c1920f75c0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "treefmt-nix",
-        "type": "github"
-      }
-    },
-    "treefmt-nix_2": {
-      "inputs": {
-        "nixpkgs": [
           "nixpkgs"
         ]
       },
@@ -866,6 +822,50 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "type": "github"
+      }
+    },
+    "treefmt-nix_2": {
+      "inputs": {
+        "nixpkgs": [
+          "uindows-themes",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786901030,
+        "narHash": "sha256-WSFCsDSE5ffgD2MqzkM2CYjeFiKhRF/dJUN8uedb6YE=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "27b3b12a8e6375f28ebe122f07d230ca5459bbfa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "uindows-themes": {
+      "inputs": {
+        "flake-parts": "flake-parts_4",
+        "git-hooks-nix": "git-hooks-nix_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "treefmt-nix": "treefmt-nix_2"
+      },
+      "locked": {
+        "lastModified": 1789142036,
+        "narHash": "sha256-+SjybTzfmO+1Epy3kzZC0fFXwrMSqzB7pwWx7jsndmk=",
+        "ref": "refs/heads/main",
+        "rev": "116ce501483ec76827e727330b3a3094c9d82647",
+        "revCount": 15,
+        "type": "git",
+        "url": "https://github.com/TaiTan291/UindowsOS-themes.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/TaiTan291/UindowsOS-themes.git"
       }
     },
     "xdph": {
